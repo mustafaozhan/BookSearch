@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObjectBinding
+    private var viewModel = MainViewModel()
+    
     var body: some View {
-        Text("Hello World")
+        
+        NavigationView {
+            
+            VStack {
+                
+                SearchBarView(text: $viewModel.searchText)
+                
+                List{
+                    Text("Item")
+                }
+            }
+            .navigationBarTitle(Text("Book Search"))
+        }
     }
 }
 
