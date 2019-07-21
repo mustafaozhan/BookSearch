@@ -69,7 +69,6 @@
 				5CFC27DF22E49381001C3987 /* App */,
 				5C364F2022E493A00039F87D /* Main */,
 				5CFC27DE22E49363001C3987 /* Resources */,
-				5CFC27D222E49357001C3987 /* Preview Content */,
 			);
 			path = BookSearch;
 			sourceTree = "<group>";
@@ -85,6 +84,7 @@
 		5CFC27DE22E49363001C3987 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5CFC27D222E49357001C3987 /* Preview Content */,
 				5CFC27D022E49357001C3987 /* Assets.xcassets */,
 				5CFC27D522E49357001C3987 /* LaunchScreen.storyboard */,
 				5CFC27D822E49357001C3987 /* Info.plist */,
@@ -313,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "BookSearch/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "BookSearch/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8MTR5SHZFD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BookSearch/Resources/Info.plist;
@@ -333,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "BookSearch/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "BookSearch/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8MTR5SHZFD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BookSearch/Resources/Info.plist;
