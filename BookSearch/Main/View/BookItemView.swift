@@ -9,59 +9,55 @@
 import SwiftUI
 
 struct BookItemView: View {
+    private var displayData: BookDisplayData
+    @State private var bookImage: UIImage? = nil
+    private let placeholderImge = UIImage(systemName: "camera")
     
-    private var  displayData: BookDisplayData
-    
-    @State
-    private var bookImage: UIImage? = nil
-    
-    private let placeHolderImage = UIImage(named: "bookPlaceHolder")
-    
+    //This way we can force injection and keep displayData private.
     init(displayData: BookDisplayData) {
         self.displayData = displayData
     }
+    
     var body: some View {
-        HStack{
-            
-            Image(uiImage: bookImage ?? placeHolderImage!)
+        HStack {
+            Image(uiImage: bookImage ?? placeholderImge!)
                 .resizable()
-                .onAppear(perform: {
-                    self.displayData.fetchImage(completion: { image in
+                .onAppear {
+                    self.displayData.fetchImage { image in
                         self.bookImage = image
-                    })
-                })
+                    }
+                }
                 .frame(width: 50, height: 65)
                 .clipShape(Rectangle())
-                .overlay(Rectangle().stroke(Color.gray,lineWidth: 1))
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text(displayData.title)
                     .font(.subheadline)
                     .fontWeight(.medium)
-                
-                HStack{
+
+                HStack {
                     Text("Authors:")
                         .font(.footnote)
                         .fontWeight(.semibold)
                         .lineLimit(2)
-                    
-                    ForEach(displayData.authors, id:  \.self){ e in
+
+
+                    ForEach(displayData.authors, id: \.self){ e in
                         Text(e)
-                            .font(.footnote)
+                        .font(.footnote)
                     }
                 }
             }
+
             Spacer()
-            
         }
         .frame(height: 65)
     }
 }
-
 #if DEBUG
 struct BookItemView_Previews: PreviewProvider {
     static var previews: some View {
-        BookItemView(displayData: BookDisplayData(id: "1234", title: "Demo Book Demo Book Demo Book Demo Book Demo Book", authors: ["Author1","Author2"], description: "BookDescription", thumbnail: URL(string:"bookDemo")!))
+        BookItemView(displayData: BookDisplayData(id: "1234", title: "Book Title", authors: ["Author1","Author2"], description: "Book Description", thumbnail: URL(string:"bookDemo")!))
             .previewLayout(.fixed(width: 300, height: 65))
             .previewDisplayName("BookItemView")
     }

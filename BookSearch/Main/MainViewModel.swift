@@ -17,4 +17,8 @@ final class MainViewModel: BindableObject {
     var searchText = "" {
         didSet { willChange.send(self) }
     }
+    
+    private (set) var items = [BookDisplayData]() {
+        didSet { willChange.send(self) }
+    }
 }

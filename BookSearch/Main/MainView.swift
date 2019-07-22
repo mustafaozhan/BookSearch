@@ -21,8 +21,10 @@ struct MainView: View {
                 
                 SearchBarView(text: $viewModel.searchText)
                 
-                List{
-                    Text("Item")
+                List(viewModel.items) { item in
+                    NavigationLink(destination: Text("Not implemented yet")) {
+                        BookItemView(displayData: item)
+                    }
                 }
             }
             .navigationBarTitle(Text("Book Search"))
