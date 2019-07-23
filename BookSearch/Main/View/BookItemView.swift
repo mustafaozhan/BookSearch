@@ -11,16 +11,15 @@ import SwiftUI
 struct BookItemView: View {
     private var displayData: BookDisplayData
     @State private var bookImage: UIImage? = nil
-    private let placeholderImge = UIImage(systemName: "camera")
-    
-    //This way we can force injection and keep displayData private.
+    private let placeholderImge = UIImage(systemName: "camera")!
+
     init(displayData: BookDisplayData) {
         self.displayData = displayData
     }
     
     var body: some View {
         HStack {
-            Image(uiImage: bookImage ?? placeholderImge!)
+            Image(uiImage: bookImage ?? placeholderImge)
                 .resizable()
                 .onAppear {
                     self.displayData.fetchImage { image in

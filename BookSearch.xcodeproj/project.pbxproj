@@ -21,6 +21,7 @@
 		5CFC27D122E49357001C3987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC27D022E49357001C3987 /* Assets.xcassets */; };
 		5CFC27D422E49357001C3987 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC27D322E49357001C3987 /* Preview Assets.xcassets */; };
 		5CFC27D722E49357001C3987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC27D522E49357001C3987 /* LaunchScreen.storyboard */; };
+		5CFCB30922E79F2B006B8C5A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCB30822E79F2B006B8C5A /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5CFC27D322E49357001C3987 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5CFC27D622E49357001C3987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CFC27D822E49357001C3987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CFCB30822E79F2B006B8C5A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/BookSearch/BookSearch/Detail/DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				5CFC27DF22E49381001C3987 /* App */,
 				5CE0FC6C22E49D5400004F9E /* Model */,
 				5C364F2022E493A00039F87D /* Main */,
+				5CFCB30722E79F06006B8C5A /* Detail */,
 				5CE0FC7622E4E99200004F9E /* Extensions */,
 				5CE0FC7322E4E5A600004F9E /* Utils */,
 				5CFC27DE22E49363001C3987 /* Resources */,
@@ -153,6 +156,14 @@
 				5CFC27C922E49357001C3987 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		5CFCB30722E79F06006B8C5A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5CFCB30822E79F2B006B8C5A /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C364F2322E4975B0039F87D /* SearchBarView.swift in Sources */,
+				5CFCB30922E79F2B006B8C5A /* DetailView.swift in Sources */,
 				5CFC27C822E49357001C3987 /* AppDelegate.swift in Sources */,
 				5CE0FC7822E4EB0E00004F9E /* URLSession.swift in Sources */,
 				5CE0FC7022E4E3AD00004F9E /* BookItemView.swift in Sources */,

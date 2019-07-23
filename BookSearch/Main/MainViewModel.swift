@@ -18,6 +18,10 @@ final class MainViewModel: BindableObject {
         didSet { willChange.send(self) }
     }
     
+    private (set) var itemImages = [String: UIImage]() {
+        didSet { willChange.send(self) }
+    }
+    
     private (set) var items = [BookDisplayData]() {
         didSet { willChange.send(self) }
     }

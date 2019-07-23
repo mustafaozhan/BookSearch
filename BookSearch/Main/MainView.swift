@@ -22,7 +22,7 @@ struct MainView: View {
                 SearchBarView(text: $viewModel.searchText)
                 
                 List(viewModel.items) { item in
-                    NavigationLink(destination: Text("Not implemented yet")) {
+                    NavigationLink(destination: DetailView(displayData: item)) {
                         BookItemView(displayData: item)
                     }
                 }
